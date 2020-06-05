@@ -3,7 +3,7 @@ $db_tables = new StdClass;
 $db_tables -> admin = "
 create table admin(
   id int primary key,
-  username varchar(20),
+  account varchar(20),
   password varchar(16)
 );";
 $db_tables -> emp = "
