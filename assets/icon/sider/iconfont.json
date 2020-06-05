@@ -1,0 +1,177 @@
+{
+  "id": "1836726",
+  "name": "员工管理",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14433098",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e809",
+      "unicode_decimal": 59401
+    },
+    {
+      "icon_id": "172570",
+      "name": "一键购买",
+      "font_class": "goumai",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "1111849",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "10268991",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e6a5",
+      "unicode_decimal": 59045
+    },
+    {
+      "icon_id": "11399065",
+      "name": "link",
+      "font_class": "link",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "162882",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "2077556",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "11398815",
+      "name": "diagnoses",
+      "font_class": "zhanghu",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "11399072",
+      "name": "lock",
+      "font_class": "lock",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "11399279",
+      "name": "sign-out-alt",
+      "font_class": "sign-out",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "11399446",
+      "name": "user-edit",
+      "font_class": "bianjizhanghu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "14435816",
+      "name": "应用",
+      "font_class": "yingyong",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "1166357",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "11398730",
+      "name": "chevron-left",
+      "font_class": "zuo",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "11398748",
+      "name": "chevron-right",
+      "font_class": "you",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "11399027",
+      "name": "infinity",
+      "font_class": "tongji",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "11399229",
+      "name": "restroom",
+      "font_class": "yuangong",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "11398765",
+      "name": "coins",
+      "font_class": "gongziguanli",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "11398832",
+      "name": "door-open",
+      "font_class": "bumen",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "11399002",
+      "name": "hiking",
+      "font_class": "jianzhi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "11399056",
+      "name": "layer-group",
+      "font_class": "renwu",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "11399125",
+      "name": "money-check-alt",
+      "font_class": "gongzi",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "11399170",
+      "name": "people-carry",
+      "font_class": "people-carry",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "11399199",
+      "name": "pray",
+      "font_class": "jiangcheng",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}

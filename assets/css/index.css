@@ -1,0 +1,274 @@
+a {
+  height: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none !important;
+}
+
+* {
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+}
+
+.text-right {
+  padding-right: 0;
+}
+
+.text-right label {
+  height: 100%;
+  margin: 0;
+  padding: 4.5px 0;
+
+}
+
+body,
+html {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.nav-caption a:hover,
+.nav-caption a {
+  color: #222;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  height: initial;
+}
+
+.nav-caption span {
+  position: relative;
+  top: 5px;
+}
+
+nav.left-side-menu {
+  width: 200px;
+  height: 100%;
+  float: left;
+  position: fixed;
+  z-index: 999;
+  border-right: 0.8px solid #eee;
+  transition: 0.2s;
+  user-select: none;
+  background: #fff;
+}
+
+section {
+  width: calc(100% - 200px);
+  height: 100vh;
+  margin-left: 200px;
+  transition: 0.2s;
+  margin-right: 0 !important;
+}
+
+header {
+  width: calc(100% - 200px);
+  position: fixed;
+  top: 0;
+  left: 200px;
+  z-index: 999;
+  transition: 0.2s;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.25);
+}
+
+header input,
+header input:focus {
+  box-shadow: none !important;
+}
+
+header .float-right h3 {
+  margin-bottom: 0;
+}
+
+header a {
+  transition: 0.2s;
+  padding: 0 2px;
+  margin: 0 5px;
+}
+
+header a:hover {
+  opacity: 0.5;
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  top: 6em;
+  transition: 0.2s;
+}
+
+.content .bg-white {
+  box-shadow: 0 0 35px 0 rgba(121, 122, 122, 0.116);
+}
+
+.content>div>h2,
+.content>div>.float-right {
+  display: inline-block;
+  width: initial;
+}
+
+.content-title {
+  color: #6c757d;
+  font-weight: 430;
+  padding-top: 0 !important;
+  font-family: Nunito, sans-serif;
+}
+
+section.section-active .content {
+  width: calc(100% - 50px);
+  position: absolute;
+  left: 50px;
+}
+
+section.section-active header {
+  width: calc(100% - 50px);
+  left: 50px;
+}
+
+header .input-group input {
+  height: inherit !important;
+}
+
+.left-side-menu-active {
+  text-align: center;
+  width: 50px !important;
+}
+
+.left-side-menu-active i.iconfont {
+  padding: 0;
+}
+
+.left-side-menu-active span {
+  display: none !important;
+}
+
+.left-side-menu-active .icon-zuo {
+  display: inline-block;
+  transform: scale(45deg) !important;
+}
+
+.nav-caption {
+  height: 55px !important;
+  box-sizing: border-box;
+}
+
+.nav-caption span {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  height: 39px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  padding-left: 10px;
+}
+
+.left-side-menu-active .list-group-item {
+  padding: 10px 0;
+  padding-top: 10px;
+}
+
+.nav-caption i {
+  display: inline-block;
+  transition: 0.3s;
+  width: 39px;
+}
+
+.nav-caption i img {
+  width: 100%;
+}
+
+.list-group-item {
+  transition: 0.1s;
+  height: 50px;
+  line-height: 35px;
+  /* text-overflow: ellipsis; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: cilp;
+}
+
+.list-group-item.active {
+  background: #5f54ff;
+  border-color: #5f54ff;
+}
+
+.list-group-item:first-child,
+.list-group-item:last-child {
+  border-radius: 0;
+}
+
+nav.left-side-menu * {
+  border: 0;
+}
+
+.left-side-menu .iconfont {
+  padding-right: 10px;
+}
+
+.zoom-nav {
+  text-align: center;
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  /**/
+}
+
+.zoom-nav,
+.zoom-nav.active {
+  background: #ccc5 !important;
+  color: #222 !important;
+  transition: 1s;
+}
+
+.zoom-nav:hover {
+  background: #ccc3 !important;
+}
+
+header>.px-2>div {
+  display: inline-block;
+}
+
+button.btn-search {
+  box-shadow: 0 0 5px #f225;
+}
+
+.breadcrumb {
+  background: #fff0;
+  padding-top: 5px;
+}
+
+@media (max-width: 768px) {
+  nav.left-side-menu {
+    text-align: center;
+    width: 50px !important;
+  }
+
+  .left-side-menu i.iconfont {
+    padding: 0;
+  }
+
+  .left-side-menu span {
+    display: none !important;
+  }
+
+  section {
+    width: calc(100% - 50px);
+    height: 80vh !important;
+    margin-left: 50px;
+  }
+
+  .list-group-item {
+    padding: 10px 0;
+    padding-top: 10px;
+  }
+
+  .content {
+    width: calc(100% - 50px);
+    height: 100%;
+    position: absolute;
+    left: 50px;
+  }
+
+  header {
+    width: calc(100% - 50px);
+    left: 50px;
+  }
+}
