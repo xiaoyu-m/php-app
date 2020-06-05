@@ -1,7 +1,7 @@
 <?php
   $account=$_POST['account'];
   $password=$_POST['password'];
-  if ($account === 'xiaoyu') {
+  if ($account === 'xiaoyu') {//
       if ($password=== 'admin') {
           $code= '2000';
           $result="xiaoyu";
@@ -14,3 +14,4 @@
       $result="该账号不存在，请重新输入";
   }
   echo json_encode(array('state' =>$code,'msg' => $result,));
+?>
