@@ -21,4 +21,4 @@ $a = new Emp();
 $res = $a -> addAdmin('xiaoyu','admin');
 // $res = $a -> Signin('xiaoyu','admin');
 ?>
-<!--  <--></-->
+<!--  -->
