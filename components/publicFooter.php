@@ -7,7 +7,6 @@
 isSignIn() //判断是否登录
 let siderState = false;
 
-
 function isSignIn() {
   if (!sessionStorage.getItem("user")) {
   location.href = "/login.php";

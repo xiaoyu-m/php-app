@@ -44,7 +44,7 @@ $('#submit').on('click', () => {
         password: $('#password').val()
     }
     $.ajax({
-        url: "/api/login.php",
+        url: "/server/login.php",
         async: true,
         type: 'post', //请求的方式
         data: user,
@@ -55,7 +55,9 @@ $('#submit').on('click', () => {
             });
         },
         success: function(res) {
-            let {state,msg} = JSON.parse(res);
+            console.log(res);
+            
+            let {state,msg} = JSON.parse(res)[0];
             if (state === '2000') {
                 sessionStorage.setItem("user", msg);
                 location.href = "/admin/index.php";

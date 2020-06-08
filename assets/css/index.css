@@ -7,16 +7,48 @@ a {
 * {
   font-family: Nunito, Arial, Helvetica, sans-serif;
 }
-
-.text-right {
-  padding-right: 0;
+.tipbox {
+  position: fixed;
+  width: 30%;
+  padding: 20px;
+  z-index: 3;
+  top: 60px;
+  left: 35%;
+  z-index: 99999;
+}
+.tipbox div {
+  text-align: center;
+  margin: 10px auto;
+  box-sizing: none;
+  position: relative;
+}
+.modal .form-group {
+  margin-bottom: 8px;
 }
 
-.text-right label {
-  height: 100%;
-  margin: 0;
-  padding: 4.5px 0;
+.modal .modal-title {
+  font-size: 20px;
+  font-weight: bold;
+}
 
+.modal .form-group label {
+  font-size: 17px;
+}
+
+.modal .form-group input,
+.modal .form-group select {
+  box-sizing: unset !important;
+  padding: 4px 0 !important;
+  text-indent: 0.5em;
+}
+
+.modal .input-err {
+  color: #f00;
+}
+
+option {
+  font-size: 15px;
+  padding: 10px;
 }
 
 body,
@@ -91,6 +123,7 @@ header a:hover {
 .content {
   width: 100%;
   position: relative;
+  z-index: 1;
   top: 6em;
   transition: 0.2s;
 }
@@ -99,8 +132,8 @@ header a:hover {
   box-shadow: 0 0 35px 0 rgba(121, 122, 122, 0.116);
 }
 
-.content>div>h2,
-.content>div>.float-right {
+.content > div > h2,
+.content > div > .float-right {
   display: inline-block;
   width: initial;
 }
@@ -222,7 +255,7 @@ nav.left-side-menu * {
   background: #ccc3 !important;
 }
 
-header>.px-2>div {
+header > .px-2 > div {
   display: inline-block;
 }
 

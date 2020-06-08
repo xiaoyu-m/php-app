@@ -1,24 +1,35 @@
 <?php
-require '../model/mysql.php';
-class Admin extends mysql {
+$dir = dirname(dirname(__FILE__));//上一级目录
+require ($dir . '/model/mysql.php');
+class Admin extends Mysql {
 	function addAdmin($account,$password){ // 添加管理账号
-		$user = $this -> tableUser('admin');
-		if ($user) {
-			$id =  $user[count($user)-1][0] + 1; //查询最后一位id
-			$sql = $id;
+		$arr = $this -> find('admin','account',$account);
+		if ($account === $arr[0][1]) {
+			echo '账号已存在，请勿重复添加！';
+			return 0;
 		}else{
-			$sql = 1;
+			$user = $this -> findAll('admin');
+			$id =$user ?  $user[count($user)-1][0] + 1 : 1;
+			$values = $id.',"'.$account.'","'.$password.'"';
+			$this -> addValues('admin',$values );
 		}
-		echo "管理员：".$sql;
 	}
-	function Signin($account,$password){ //登录
-		echo '<br/>'."Signin";
-		echo '<br/>'.$account;
-		echo '<br/>'.$password;
+	function adminSignin($account,$password){ //登录
+		$user = $this -> find('admin','account',$account);
+		$result = new StdClass;
+		if ($user) {
+			if ($user[0][2] === $password) {
+				$result -> state = '2000';
+				$result -> msg = '恭喜你，登录成功';
+			}else{
+				$result -> state = '4001';
+				$result -> msg = '密码错误，请重新填写';
+			}
+		}else{
+			$result -> state = '4000';
+			$result -> msg = '账号错误，请重新填写';
+		}
+		return $result;
 	}
 }
-$a = new Admin();
-$res = $a -> addAdmin('xiaoyu','admin');
-// $res = $a -> Signin('xiaoyu','admin');
 ?>
-<!--  -->
