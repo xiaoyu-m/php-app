@@ -2,13 +2,10 @@
 <html lang="zh">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/assets/images/favicon.ico" />
   <title>后台管理</title>
-  <link rel="stylesheet" href="/assets/css/public/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/icon/sider/iconfont.css">
-  <link rel="stylesheet" href="/assets/css/index.css">
+  <?php
+    include_once '../components/publicHeader.php';
+  ?>
   <style>
     #home-total {
       height: calc(100vh - 120px);

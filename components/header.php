@@ -5,7 +5,7 @@
       <div class="input-group input-group-sm ">
         <input type="text" class="form-control" placeholder="search······" aria-label="Amount (to the nearest dollar)">
         <div class="input-group-append">
-          <button class="btn btn-danger btn-search ">搜索
+          <button class="btn btn-primary btn-search ">搜索
           </button>
         </div>
       </div>

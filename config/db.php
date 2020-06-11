@@ -1,5 +1,5 @@
 <?php
-$db_tables = new StdClass;
+$db_tables = new class{};
 
 //管理员表
 $db_tables -> admin = "
@@ -7,6 +7,12 @@ create table admin(
   id int primary key,
   account varchar(20),
   password varchar(16)
+);";
+//部门表
+$db_tables -> dept = "
+create table dept(
+  deptNo int primary key,
+  deptName varchar(20)
 );";
 //员工表
 $db_tables -> emp = "

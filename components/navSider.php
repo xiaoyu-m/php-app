@@ -10,12 +10,12 @@
         <?php
             echo $username;
             ?>
-            </span>
+        </span>
       </a>
     </div>
     <a class="list-group-item list-group-item-action" href="/admin/index.php" role="tab" data-toggle="tooltip"
       data-placement="right" title="首页">
-      <i class="iconfont icon-zhanghu"></i>
+      <i class="iconfont icon-shouye"></i>
       <span>首页</span>
     </a>
     <a class="list-group-item list-group-item-action" href="/admin/emp.php" role="tab" data-toggle="tooltip"

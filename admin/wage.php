@@ -2,13 +2,10 @@
 <html lang="zh">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/assets/images/favicon.ico" />
   <title>工资管理</title>
-  <link rel="stylesheet" href="/assets/css/public/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/icon/sider/iconfont.css">
-  <link rel="stylesheet" href="/assets/css/index.css">
+  <?php
+    include_once '../components/publicHeader.php';
+  ?>
 </head>
 
 <body>
@@ -21,8 +18,8 @@
       include_once '../components/header.php';
     ?>
       <div class="content">
-        <div>
-          <h2 class="p-3 pl-4 content-title">工资管理</h2>
+        <div class="container-fluid ">
+          <h2 class="p-2 content-title">工资管理</h2>
           <nav class="container-fluid float-right" aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/">后台管理</a></li>

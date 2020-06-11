@@ -7,6 +7,7 @@ a {
 * {
   font-family: Nunito, Arial, Helvetica, sans-serif;
 }
+
 .tipbox {
   position: fixed;
   width: 30%;
@@ -21,6 +22,12 @@ a {
   margin: 10px auto;
   box-sizing: none;
   position: relative;
+}
+.modal {
+  z-index: 9999999;
+}
+.modal-dialog {
+  z-index: 9;
 }
 .modal .form-group {
   margin-bottom: 8px;
@@ -43,7 +50,7 @@ a {
 }
 
 .modal .input-err {
-  color: #f00;
+  color: #ef5552;
 }
 
 option {
@@ -144,7 +151,13 @@ header a:hover {
   padding-top: 0 !important;
   font-family: Nunito, sans-serif;
 }
-
+.input-group {
+  margin-bottom: 7px;
+}
+.input-group label {
+  font-weight: 600;
+  font-family: Nunito, sans-serif;
+}
 section.section-active .content {
   width: calc(100% - 50px);
   position: absolute;
@@ -165,19 +178,16 @@ header .input-group input {
   width: 50px !important;
 }
 
-.left-side-menu-active i.iconfont {
-  padding: 0;
-}
-
 .left-side-menu-active span {
   display: none !important;
 }
-
-.left-side-menu-active .icon-zuo {
-  display: inline-block;
-  transform: scale(45deg) !important;
+.left-side-menu .iconfont {
+  padding-right: 5px;
+  font-size: 16px !important;
 }
-
+.left-side-menu-active .iconfont {
+  padding-right: 0;
+}
 .nav-caption {
   height: 55px !important;
   box-sizing: border-box;
@@ -219,8 +229,8 @@ header .input-group input {
 }
 
 .list-group-item.active {
-  background: #5f54ff;
-  border-color: #5f54ff;
+  background: #4a5fc6;
+  border-color: #4a5fc6;
 }
 
 .list-group-item:first-child,
@@ -230,10 +240,6 @@ header .input-group input {
 
 nav.left-side-menu * {
   border: 0;
-}
-
-.left-side-menu .iconfont {
-  padding-right: 10px;
 }
 
 .zoom-nav {
@@ -264,10 +270,33 @@ button.btn-search {
 }
 
 .breadcrumb {
+  /* 面包屑样式 */
   background: #fff0;
   padding-top: 5px;
 }
+.row {
+  padding: 8px;
+}
+th.caozuo,
+td.caozuo {
+  text-align: center;
+}
+td.caozuo button {
+  margin: 0 2px;
+  padding: 5px 20px;
+}
+th,
+td {
+  vertical-align: middle !important;
+}
 
+/* 分页 */
+.pagination b {
+  font-size: 12px;
+}
+.page-link {
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   nav.left-side-menu {
     text-align: center;

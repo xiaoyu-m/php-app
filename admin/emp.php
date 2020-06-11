@@ -2,34 +2,28 @@
 <html lang="zh">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/assets/images/favicon.ico" />
   <title>员工管理</title>
-  <link rel="stylesheet" href="/assets/css/public/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/icon/sider/iconfont.css">
-  <link rel="stylesheet" href="/assets/css/index.css">
-  <style>
-  
-  </style>
+  <?php
+    include_once '../components/publicHeader.php';
+  ?>
 </head>
 
 <body>
   <!-- 添加员工 -->
   <div class="tipbox">
   </div>
-  <div class="modal mt-5 fade "  id="addEmpModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal mt-5"  id="addEmpModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">添加员工</h5>
+          <h5 class="modal-title">添加员工</h5>
           <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <form id="addEmpForm">
-            <div class="form-group row">
+            <div class="input-group input-group-sm">
               <div class="col-12">
                 <label for="#empName">
                   姓名：
@@ -37,7 +31,7 @@
                 <input type="text" name="empName" class="form-control" id="empName">
               </div>
             </div>
-            <div class="form-group row">
+            <div class="input-group input-group-sm">
               <div class="col-6">
                 <label for="#sex">
                   性别：
@@ -54,7 +48,7 @@
                 <input type="text" name="age" class="form-control" id="age">
               </div>
             </div>
-            <div class="form-group row">
+            <div class="input-group input-group-sm">
               <div class="col-6">
                 <label for="#dept">
                   部门：
@@ -80,7 +74,7 @@
                 </select>
               </div>
             </div>
-            <div class="form-group row">
+            <div class="input-group input-group-sm">
               <div class="col-12">
                 <label for="#native">
                   籍贯：
@@ -88,7 +82,7 @@
                 <input type="text" name="native" class="form-control" id="native">
               </div>
             </div>
-            <div class="form-group row">
+            <div class="input-group input-group-sm">
               <div class="col-6">
                 <label for="#state">
                   状态：
@@ -105,7 +99,7 @@
                 <input type="text" name="likes" class="form-control" id="likes">
               </div>
             </div>
-            <div class="form-group row">
+            <div class="input-group input-group-sm">
               <div class="col-12">
                 <label for="#remark" >
                   备注：
@@ -116,10 +110,71 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-lg btn-secondary close-btn" data-dismiss="modal">
+          <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">
             取消
           </button>
-          <button type="button" class="btn btn-lg btn-primary addEmpBtn">添加</button>
+          <button type="button" class="btn btn-primary addEmpBtn">添加</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal mt-5"  id="viewEmpModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">员工列表</h5>
+          <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary close-btn" data-dismiss="modal">
+            确定
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal mt-5"  id="editEmpModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">编辑员工</h5>
+          <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">
+            取消
+          </button>
+          <button type="button" class="btn btn-primary editEmpBtn">编辑</button>
+       </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal mt-5"  id="delEmpModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">删除员工</h5>
+          <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+          <div class="modal-body">
+          
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">
+            取消
+          </button>
+          <button type="button" class="btn btn-primary delEmpBtn">确认</button>
         </div>
       </div>
     </div>
@@ -133,9 +188,10 @@
     include_once '../components/header.php';
     ?>
       <div class="content">
-        <div>
-          <h2 class="p-3 pl-4 content-title">员工管理</h2>
+        <div class="container-fluid ">
+          <h2 class="pb-2 content-title">员工管理</h2>
           <nav class="container-fluid float-right" aria-label="breadcrumb">
+            <!-- 面包屑导航  -->
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/">后台管理</a></li>
               <li class="breadcrumb-item active" aria-current="page">员工管理</li>
@@ -143,16 +199,55 @@
           </nav>
         </div>
         <div class="container-fluid " id="index-total">
-          <div class="bg-white p-4">
-            <button type="button" class="add add-emp btn btn-primary" data-toggle="modal" data-target="#addEmpModal">
-              <i class="iconfont icon-tianjia"></i>
-              <b> 添加员工</b>
-            </button>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                      <button type="button" class="add add-emp btn btn-primary" data-toggle="modal" data-target="#addEmpModal">
+                        <i class="iconfont icon-tianjia"></i>
+                        <b> 添加员工</b>
+                      </button>
+                  </div>
+                  <div class="cord-text">
+                    <table class="col-12 emp-list table table-hover table-condensed">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>姓名</th>
+                          <th>性别</th>
+                          <th>年龄</th>
+                          <th>部门</th>
+                          <th>职称</th>
+                          <th>籍贯</th>
+                          <th>状态</th>
+                          <th>爱好</th>
+                          <th>备注</th>
+                          <th class="caozuo">操作</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                    <div class="col-12">
+                      <nav aria-label="Page navigation text-rigth example">
+                        <ul class="pagination">
+                          <li class="page-item"><b class="page-link iconfont icon-zuo"></b></li>
+                          <li class="page-item active"><b class="page-link" >1</b></li>
+                          <li class="page-item"><b class="page-link" >2</b></li>
+                          <li class="page-item"><b class="page-link" >3</b></li>
+                          <li class="page-item"><b class="page-link iconfont icon-you"></b></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-          <?php
+        <?php
           include_once '../components/footer.php';
-          ?>
+        ?>
       </div>
     </section>
   </div>
@@ -160,101 +255,6 @@
 <?php
 include_once '../components/publicFooter.php';
 ?>
-<script>
-// 输入框 验证
-$(`#addEmpForm label`).map(function(index,elem) {
-  $('#addEmpForm .form-control')[index].onclick = function () {
-    $(`#addEmpForm label`)[index].classList.remove('input-err')
-  }
-})
-// 关闭模态框 清空所有input的值
-$('.close-btn').click(function() {
-  // console.log(this)
-  closeAllInput()
-});
-// 添加员工 
-$('.addEmpBtn').click(function(event) {
-  let addEmpForm = $('#addEmpForm').serializeArray();
-  // let data = 1;
-  let data = isEmpty(addEmpForm);
-  if (data) {
-    sedEmp(data);
-  }
-});
-function Alert(alertType,msg) { // 警告框
-   $('.tipbox').append(
-    `<div class="alert alert-${alertType}">
-      <strong>${msg}</strong>
-    </div>`
-  );
-  for (let index = 0; index < $('.alert').length; index++) {
-    setTimeout(() => { // 定时删除 警告框 点击后2秒
-      if ($('.alert')[index]) {
-        $('.alert')[index].remove()
-      }else{
-        return ;
-      }
-    }, 2000);
-  }
-}
-function cleanTimer() {
-  for (let index = 0; index < $('.alert').length; index++) {
-    clearTimeout(_alert[index]);
-  }
-}
-function closeAllInput() { //清空 所有input的值
-  $('input').map(function(i,elem) {
-    elem.value = '' 
-  })
-}
-function isEmpty(data){
-  let results = {};
-  data.map(function(elem, index) {
-    results[elem.name] = elem.value;
-    if(elem.value === ''){
-      $(`#addEmpForm label`)[index].classList.add('input-err')
-    }else{
-      $(`#addEmpForm label`)[index].classList.remove('input-err')
-    }
-  });
-  tipMsg = false;
-  $(`#addEmpForm label`).map(function(elem,index) {
-    if ($(this).attr('class') === 'input-err') {
-      tipMsg = '表单数据有误，请根据红色警告重新填写';
-    }
-  })
-  if (tipMsg) {
-    alert(tipMsg);
-    return false;
-  }else{
-    return results;
-  }
-}
-function sedEmp(data) {
-  $.ajax({
-    url: "/server/emp.php",
-    async: true,
-    type: 'post', //请求的方式
-    data: data,
-    beforeSend: function() {
-    // 禁用按钮防止重复提交
-        $("#submit").attr({
-            disabled: "disabled"
-        });
-    },
-    success: function(res) {
-      console.log(res);
-    },
-    catch: function(err) {
-        console.log(err);
-    }
-  });
-}
-getEmpList();
-function getEmpList() {
-  $.get("/server/emp.php", { name: "John", time: "2pm" },function(res){
-    console.log(res);
-  });
-}
-</script>
+
+<script src="/assets/js/emp.js"></script>
 </html>

@@ -3,5 +3,5 @@
   $admin = new Admin();
   
   $res = $admin -> adminSignin($_POST['account'],$_POST['password']);
-  echo json_encode(array($res));
+  echo json_encode($res);
 ?>

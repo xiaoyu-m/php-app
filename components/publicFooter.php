@@ -6,9 +6,31 @@
 
 isSignIn() //判断是否登录
 let siderState = false;
-
+// 关闭模态框 清空所有input的值
+$('.close-btn').click(function () {
+  // console.log(this)
+  closeAllInput();
+});
+// 警告框
+function Alert(alertType, msg) {
+  $('.tipbox').append(
+    `<div class="alert alert-${alertType}">
+        <strong>${msg}</strong>
+      </div>`
+  );
+  for (let index = 0; index < $('.alert').length; index++) {
+    setTimeout(() => {
+      // 定时删除 警告框 点击后2秒
+      if ($('.alert')[index]) {
+        $('.alert')[index].remove();
+      } else {
+        return;
+      }
+    }, 2000);
+  }
+}
 function isSignIn() {
-  if (!sessionStorage.getItem("user")) {
+  if (!sessionStorage.getItem("token")) {
   location.href = "/login.php";
 }
 }
@@ -29,7 +51,7 @@ $('a.list-group-item').click(function() {//导航状态切换 .active
   ?>
 })
 $('.icon-sign-out').click(function () {
-  sessionStorage.removeItem("user");
+  sessionStorage.removeItem("token");
   isSignIn()
 })
 <?php

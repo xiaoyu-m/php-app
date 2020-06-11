@@ -1,0 +1,27 @@
+body {
+  height: 100%;
+  padding-top: 26vh;
+  background: url('/assets/images/bg.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji' !important;
+}
+.form-group {
+  margin-bottom: 5px;
+}
+h3.text-muted {
+  font-weight: 400;
+}
+label {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+#submit {
+  background: #f16c69;
+  border-color: #f16c69;
+}

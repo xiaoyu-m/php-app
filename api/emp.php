@@ -9,29 +9,36 @@ class Emp extends mysql {
 	function addEmp($values){ 
 		$user = $this -> findAll('emp'); //获取所用员工信息，用来生成新员工的id
 		if ($user) {
-			$empNo =  $user[count($user)-1][0] + 1; //新员工id = 最后一位员工id + 1
+			$empNo = $user[count($user)-1] -> empNo;
+			$empNo = $empNo + 1;
+			// $empNo =  $user[count($user)-1][0] + 1; //新员工id = 最后一位员工id + 1
 		}else{
 			$empNo = 1;
 		}
 		$values = $empNo.$values;
-		$this -> addValues('emp', $values);
-		// echo $values;
+		return $this -> addValues('emp', $values);
 	}
 	/**
 	 * @param 删除员工
 	 * @param {Object} option - {empNo}
-	 * sssssss
+	 * 
 	 */
-	function delEmp($id){ 
-		echo "删除员工";
+	function delEmp($empNo){ 
+		$user = $this -> find('emp', 'empNo', $empNo);
+		if (count($user)) {
+			$res = $this -> delValue('emp','empNo',$empNo);
+		}
 	}
 	/**
 	 * @param 编辑员工
 	 * @param {Object} option - {empNo, empInfo}
 	 * 
 	 */
-	function editEmp($id){ 
-		echo "编辑员工";
+	function editEmp($empNo, $values){ 
+		$user = $this -> find('emp', 'empNo', $empNo);
+		if (count($user)) {
+			$res = $this -> update('emp',$values, 'empNo = '.$empNo);
+		}
 	}
 	/**
 	 * @param 员工列表
@@ -39,7 +46,8 @@ class Emp extends mysql {
 	 * 
 	 */
 	function listEmp(){ 
-		echo "员工列表";
+		$user = $this -> findAll('emp');
+		return $user;
 	}
 }
 // $emp = new Emp();

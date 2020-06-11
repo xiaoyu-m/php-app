@@ -2,42 +2,178 @@
 <html lang="zh">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/assets/images/favicon.ico" />
   <title>部门管理</title>
-  <link rel="stylesheet" href="/assets/css/public/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/icon/sider/iconfont.css">
-  <link rel="stylesheet" href="/assets/css/index.css">
+  <?php
+    include_once '../components/publicHeader.php';
+  ?>
 </head>
-
 <body>
+  <!-- 添加部门 -->
+  <div class="tipbox">
+  </div>
+  <div class="modal mt-5"  id="addModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">添加部门</h5>
+          <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="addForm">
+            <div class="input-group input-group-sm">
+              <div class="col-12">
+                <label for="#deptNo">
+                  部门编号：
+                </label>
+                <input type="text" name="deptNo" class="form-control" id="deptNo">
+              </div>
+            </div>
+            <div class="input-group input-group-sm">
+              <div class="col-12">
+                <label for="#deptName">
+                  部门名称：
+                </label>
+                <input type="text" name="deptName" class="form-control" id="deptName">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">
+            取消
+          </button>
+          <button type="button" class="btn btn-primary addBtn">添加</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal mt-5"  id="viewModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">部门列表</h5>
+          <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary close-btn" data-dismiss="modal">
+            确定
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal mt-5"  id="editModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">编辑部门</h5>
+          <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">
+            取消
+          </button>
+          <button type="button" class="btn btn-primary editBtn">编辑</button>
+       </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal mt-5"  id="delModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">删除部门</h5>
+          <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+          <div class="modal-body">
+          
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">
+            取消
+          </button>
+          <button type="button" class="btn btn-primary delBtn">确认</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="root">
     <?php
-      include_once '../components/navSider.php';
+    include_once '../components/navSider.php';
     ?>
     <section>
-      <?php
-      include_once '../components/header.php';
+    <?php
+    include_once '../components/header.php';
     ?>
       <div class="content">
-        <div>
-          <h2 class="p-3 pl-4 content-title">部门管理</h2>
+        <div class="container-fluid  ">
+          <h2 class="pb-2 content-title">部门管理</h2>
           <nav class="container-fluid float-right" aria-label="breadcrumb">
+            <!-- 面包屑导航  -->
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/">后台管理</a></li>
-            <li class="breadcrumb-item active" aria-current="page">部门管理</li>
+              <li class="breadcrumb-item active" aria-current="page">部门管理</li>
             </ol>
           </nav>
         </div>
-        <div class="container-fluid " id="index-total">
-          <div class="bg-white p-4">
-            <button type="button" class="btn btn-danger">部门管理</button>
+        <div class="container-fluid" id="index-total">
+          <div class="">
+          <div class="row">
+            <div class="col-md-8 col-12" style="width: 18rem;">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <button type="button" class="add add-dept btn btn-primary" data-toggle="modal" data-target="#addModal">
+                      <i class="iconfont icon-tianjia"></i>
+                      <b> 添加部门</b>
+                    </button>
+                  </div>
+                    <div class="card-text">
+                      <table class="emp-list table table-hover table-condensed">
+                        <thead>
+                          <tr>
+                          <th>#</th>
+                          <th>部门编号</th>
+                          <th>部门</th>
+                          <th class="caozuo">操作</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12" style="width: 18rem;">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-          <?php
-            include_once '../components/footer.php';
-          ?>
+        </div>
+        <?php
+          include_once '../components/footer.php';
+        ?>
       </div>
     </section>
   </div>
@@ -45,5 +181,6 @@
 <?php
   include_once '../components/publicFooter.php';
 ?>
+<script src="/assets/js/dept.js"></script>
 
 </html>

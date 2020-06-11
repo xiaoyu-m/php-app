@@ -1,7 +1,8 @@
 
 <script>
-let token = localStorage.getItem("token");
+let token = sessionStorage.getItem("token");
 let href = '/login.php';
+
 if (token) {
 	href = '/admin/index.php';
 }
