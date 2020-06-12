@@ -28,14 +28,10 @@ $('.editEmpBtn').click(function (event) {
 });
 //操作 删除员工
 $('.delEmpBtn').click(function (event) {
+  // console.log(11111111);
+
   delEmp();
 });
-//指令 清空所有input值
-function closeAllInput() {
-  $('input').map(function (i, elem) {
-    elem.value = '';
-  });
-}
 // 验证表单 是否为空
 function isEmpty(data) {
   let results = {};
@@ -104,9 +100,12 @@ function getEmpList() {
     // console.log(111111, res);
     if (res) {
       let { state, msg } = JSON.parse(res);
+      console.log(msg);
       if (state === '2000') {
         // Alert('success','嘤嘤嘤');
         empList = msg;
+      } else {
+        empList = [];
       }
       showEmpList();
     }
@@ -116,7 +115,7 @@ function getEmpList() {
 function showEmpList() {
   let $tr = '',
     trs = '';
-  // console.log(empList.length);
+  console.log(empList.length);
   if (empList.length) {
     empList.map((e, i) => {
       $tr = `<tr>
@@ -234,10 +233,10 @@ function delEmp() {
   $.get('/server/emp.php', { params: 'delEmpItem', data: empNo }, function (
     res
   ) {
-    console.log(res);
-
-    Alert('success', '成功删除员工信息');
-    $('#delEmpModal').modal('hide');
-    getEmpList();
+    if (1) {
+      getEmpList();
+      Alert('success', '成功删除员工信息');
+      $('#delEmpModal').modal('hide');
+    }
   });
 }

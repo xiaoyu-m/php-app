@@ -209,8 +209,8 @@
                         <b> 添加员工</b>
                       </button>
                   </div>
-                  <div class="cord-text">
-                    <table class="col-12 emp-list table table-hover table-condensed">
+                  <div class="cord-text table-responsive">
+                    <table class=" emp-list table table-hover table-condensed">
                       <thead>
                         <tr>
                           <th>#</th>

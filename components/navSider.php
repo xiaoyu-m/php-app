@@ -11,7 +11,7 @@
             echo $username;
             ?>
         </span>
-      </a>
+      </a> href="/admin/index.php" 首页
     </div>
     <a class="list-group-item list-group-item-action" href="/admin/index.php" role="tab" data-toggle="tooltip"
       data-placement="right" title="首页">
@@ -33,14 +33,9 @@
       <i class="iconfont icon-gongzi"></i>
       <span>基本工资</span>
     </a>
-    <a class="list-group-item list-group-item-action" href="/admin/partjob.php" role="tab" data-toggle="tooltip" data-placement="right"
-      title="兼职管理">
-      <i class="iconfont icon-jianzhi"></i>
-      <span>兼职管理</span>
-    </a>
     <a class="list-group-item list-group-item-action" href="/admin/task.php" role="tab" data-toggle="tooltip" data-placement="right"
-      title="任务管理">
-      <i class="iconfont icon-renwu"></i>
+      title="任务/兼职">
+      <i class="iconfont icon-jianzhi"></i>
       <span>任务管理</span>
     </a>
     <a class="list-group-item list-group-item-action" href="/admin/raq.php" role="tab" data-toggle="tooltip" data-placement="right"

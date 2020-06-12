@@ -90,6 +90,8 @@ function getDeptList() {
       if (state === '2000') {
         // Alert('success','嘤嘤嘤');
         DeptList = msg;
+      } else {
+        DeptList = [];
       }
       showWageList();
     }
@@ -99,6 +101,8 @@ function getDeptList() {
 function showWageList() {
   let $tr = '',
     trs = '';
+  console.log(DeptList);
+
   if (DeptList.length) {
     DeptList.map((e, i) => {
       $tr = `<tr>

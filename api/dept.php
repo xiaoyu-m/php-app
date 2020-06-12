@@ -9,8 +9,7 @@ class dept extends mysql {
 	function addDept($deptNo,$values){ 
 		$user = $this -> find('dept','deptNo',$deptNo); //获取所用部门信息，用来生成新部门的id
 		
-		if (!$user) {echo $deptNo;
-			var_dump($user);
+		if (!$user) {
 		return $this -> addValues('dept', $values);
 		}	
 		return false;

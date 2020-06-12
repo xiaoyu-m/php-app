@@ -6,6 +6,13 @@
 
 isSignIn() //判断是否登录
 let siderState = false;
+
+//指令 清空所有input值
+function closeAllInput() {
+  $('input').map(function (i, elem) {
+    elem.value = '';
+  });
+}
 // 关闭模态框 清空所有input的值
 $('.close-btn').click(function () {
   // console.log(this)

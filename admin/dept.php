@@ -119,7 +119,7 @@
     include_once '../components/header.php';
     ?>
       <div class="content">
-        <div class="container-fluid  ">
+        <div class="container-fluid">
           <h2 class="pb-2 content-title">部门管理</h2>
           <nav class="container-fluid float-right" aria-label="breadcrumb">
             <!-- 面包屑导航  -->
@@ -141,7 +141,7 @@
                       <b> 添加部门</b>
                     </button>
                   </div>
-                    <div class="card-text">
+                    <div class="card-text  table-responsive">
                       <table class="emp-list table table-hover table-condensed">
                         <thead>
                           <tr>

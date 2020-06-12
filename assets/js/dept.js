@@ -25,6 +25,7 @@ $('.editBtn').click(function () {
 });
 //操作 删除部门
 $('.delBtn').click(function () {
+  // console.log(111111);
   delDept();
 });
 //指令 清空所有input值
@@ -71,6 +72,8 @@ function getData(even) {
 function sendDept(data) {
   $.post('/server/dept.php', { params: 'addDept', data: data }, function (res) {
     if (res) {
+      console.log(res);
+
       let { state, msg } = JSON.parse(res);
       // if (state === '2000') {
       closeAllInput();
@@ -89,6 +92,8 @@ function getDeptList() {
       if (state === '2000') {
         // Alert('success','嘤嘤嘤');
         DeptList = msg;
+      } else {
+        DeptList = [];
       }
       showDeptList();
     }

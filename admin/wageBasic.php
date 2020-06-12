@@ -42,7 +42,7 @@
             <div class="input-group input-group-sm">
               <div class="col-12">
                 <label for="#basicWage">
-                  姓名：
+                  基本工资：
                 </label>
                 <input type="text" name="basicWage" class="form-control" id="basicWage">
               </div>
@@ -50,7 +50,7 @@
             <div class="input-group input-group-sm">
               <div class="col-12">
                 <label for="#jobWage">
-                  姓名：
+                  岗位工资：
                 </label>
                 <input type="text" name="jobWage" class="form-control" id="jobWage">
               </div>

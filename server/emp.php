@@ -88,7 +88,7 @@ function getEmpList($emp){
     $reslut -> msg = $res;
   }else{
     $reslut -> state = '4000';
-    $reslut -> msg = '您没有权限获取数据';
+    $reslut -> msg = '哈哈哈哈，没有数据';
   }
   echo json_encode($reslut);
 }

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>
     登录
@@ -7,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/login.css">
   <link rel="stylesheet" href="/assets/css/public/public.css">
 </head>
+<body>
 <div id="login-total" class="container align-middle">
 <div class="row">
     <div class="col-lg-6 col-md-8 col-10 offset-lg-3 offset-md-2 offset-1">
@@ -87,4 +90,6 @@ $('#submit').on('click', () => {
     });
 })
 </script>
-</div>
+</body>
+
+</html>
