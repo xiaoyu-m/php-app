@@ -13,7 +13,6 @@ class Mysql {
 		$this -> con = $con; // 将mysql连接导向 con
 	}
 	function pubicMysql($sql) {// 公共函数 执行sql语句  并返回值
-		// echo $isResult;
 		$result = mysqli_query($this -> con, $sql);
 		$rowLen = $result -> num_rows;
 		$data = new class{};

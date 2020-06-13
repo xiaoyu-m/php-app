@@ -6,6 +6,11 @@
   <?php
     include_once '../components/publicHeader.php';
   ?>
+  <style>
+    .row{
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -147,7 +152,7 @@
         <div class="container-fluid" id="index-total">
           <div>
           <div class="row">
-            <div class=" col-12" style="width: 18rem;">
+            <div class="col-12" style="width: 18rem;">
               <div class="card">
                 <div class="card-body">
                   <div class="card-title">
@@ -157,7 +162,7 @@
                     </button>
                   </div>
                     <div class="card-text">
-                      <table class="emp-list table table-hover table-condensed">
+                      <table class="wage-list table table-hover table-condensed">
                         <thead>
                           <tr>
                           <th>#</th>
@@ -176,7 +181,8 @@
             </div>
           </div>
         </div>
-        </div></div>
+        </div>
+      </div>
     </section>
   </div>
 </body>

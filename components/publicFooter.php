@@ -12,6 +12,9 @@ function closeAllInput() {
   $('input').map(function (i, elem) {
     elem.value = '';
   });
+  $('textarea').map(function (i, elem) {
+    elem.value = '';
+  });
 }
 // 关闭模态框 清空所有input的值
 $('.close-btn').click(function () {

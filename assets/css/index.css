@@ -7,7 +7,9 @@ a {
 * {
   font-family: Nunito, Arial, Helvetica, sans-serif;
 }
-
+body {
+  background: #fcfcfc;
+}
 .tipbox {
   position: fixed;
   width: 30%;
@@ -229,8 +231,10 @@ header .input-group input {
 }
 
 .list-group-item.active {
-  background: #4a5fc6;
-  border-color: #4a5fc6;
+  font-weight: 700;
+  color: #fff;
+  background: #4c6de6;
+  border-color: #4c6de6;
 }
 
 .list-group-item:first-child,
@@ -252,13 +256,18 @@ nav.left-side-menu * {
 
 .zoom-nav,
 .zoom-nav.active {
-  background: #ccc5 !important;
-  color: #222 !important;
-  transition: 1s;
+  font-weight: 700;
+  color: #fff !important;
+  background: #4c6de6;
+  border-color: #4c6de6;
+  transition: 0.4s;
 }
 
 .zoom-nav:hover {
-  background: #ccc3 !important;
+  color: #fff !important;
+  font-weight: 600;
+  background: #4c6de6;
+  border-color: #4c6de6;
 }
 
 header > .px-2 > div {

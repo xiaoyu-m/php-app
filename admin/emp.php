@@ -10,8 +10,7 @@
 
 <body>
   <!-- 添加员工 -->
-  <div class="tipbox">
-  </div>
+  <div class="tipbox"> </div>
   <div class="modal mt-5"  id="addEmpModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -210,7 +209,7 @@
                       </button>
                   </div>
                   <div class="cord-text table-responsive">
-                    <table class=" emp-list table table-hover table-condensed">
+                    <table class="emp-list table table-hover table-condensed">
                       <thead>
                         <tr>
                           <th>#</th>

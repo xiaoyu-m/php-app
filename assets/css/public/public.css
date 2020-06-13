@@ -1645,9 +1645,6 @@ label {
 .form-group {
   margin: 10px auto;
 }
-.row {
-  width: 100%;
-}
 .select2-results__option {
   padding: 6px 12px;
 }
@@ -2700,6 +2697,9 @@ table.focus-on tbody tr.focused td {
 }
 .table > tbody > tr > .thick-line {
   border-top: 2px solid #f9f9f9;
+}
+[class*='col-'] {
+  padding: 0 8px !important;
 }
 @media print {
   .topbar-main,

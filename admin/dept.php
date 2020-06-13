@@ -6,11 +6,15 @@
   <?php
     include_once '../components/publicHeader.php';
   ?>
+  <style>
+    .row{
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <!-- 添加部门 -->
-  <div class="tipbox">
-  </div>
+  <div class="tipbox"></div>
   <div class="modal mt-5"  id="addModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -130,7 +134,7 @@
           </nav>
         </div>
         <div class="container-fluid" id="index-total">
-          <div class="">
+          <div >
           <div class="row">
             <div class="col-md-8 col-12" style="width: 18rem;">
               <div class="card">

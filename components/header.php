@@ -1,8 +1,7 @@
-
 <header class="bg-white">
   <div class="px-2">
-    <div class="py-3 py-3 px-2 col-5 col-md-4">
-      <div class="input-group input-group-sm ">
+    <div class="col-5 col-md-4">
+      <div class="input-group input-group-sm mt-2">
         <input type="text" class="form-control" placeholder="search······" aria-label="Amount (to the nearest dollar)">
         <div class="input-group-append">
           <button class="btn btn-primary btn-search ">搜索

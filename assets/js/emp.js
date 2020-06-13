@@ -18,6 +18,7 @@ $('.addEmpBtn').click(function (event) {
   // let data = 1;
   let data = isEmpty(addEmpForm);
   if (data) {
+    closeAllInput();
     // console.log(data);
     sendEmp(data);
   }
@@ -84,7 +85,7 @@ function sendEmp(data) {
       let { state, msg } = JSON.parse(res);
       if (state === '2000') {
         $('#addEmpModal').modal('hide');
-        closeAllInput();
+
         getEmpList();
         Alert('success', msg);
       }

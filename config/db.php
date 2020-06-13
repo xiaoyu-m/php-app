@@ -48,7 +48,10 @@ $db_tables -> task = "
 create table task(
   taskNo int(20) primary key,
   taskType varchar(20),
-  taskName varchar(20)
+  taskName varchar(20),
+  taskInfo varchar(100),
+  taskNum INT(20),
+  taskSum INT(30)
 );";
 // 奖惩表
 $db_tables -> req = "

@@ -57,7 +57,7 @@
 <script src="/assets/js/public/jquery-3.4.1.min.js"></script>
 <script>
 let user = {}, resdata = {};
-$('#submit').on('click', () => {
+$('#submit').on('click',function ()  {
     user = {
         account: $('#account').val(),
         password: $('#password').val()
