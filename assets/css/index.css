@@ -233,8 +233,8 @@ header .input-group input {
 .list-group-item.active {
   font-weight: 700;
   color: #fff;
-  background: #4c6de6;
-  border-color: #4c6de6;
+  background: #3b51bb;
+  border-color: #3b51bb;
 }
 
 .list-group-item:first-child,
@@ -258,16 +258,16 @@ nav.left-side-menu * {
 .zoom-nav.active {
   font-weight: 700;
   color: #fff !important;
-  background: #4c6de6;
-  border-color: #4c6de6;
+  background: #3b51bb;
+  border-color: #3b51bb;
   transition: 0.4s;
 }
 
 .zoom-nav:hover {
   color: #fff !important;
   font-weight: 600;
-  background: #4c6de6;
-  border-color: #4c6de6;
+  background: #3b51bb;
+  border-color: #3b51bb;
 }
 
 header > .px-2 > div {
